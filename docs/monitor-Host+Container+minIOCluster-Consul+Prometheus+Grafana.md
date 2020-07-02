@@ -52,20 +52,20 @@ Consul v1.7.0
 Protocol 2 spoken by default, understands 2 to 3 (agent will automatically use protocol >2 when speaking to compatible agents)
 ```
 
-## 4.3. Bật tính năng autocompletion để tự động sửa các option trong câu lênh `consul`
+### 4.3. Bật tính năng autocompletion để tự động sửa các option trong câu lênh `consul`
 ```sh
 consul -autocomplete-install
 complete -C /usr/local/bin/consul consul
 ```
 
-## 4.4. Tạo user consul và thư mục của nó
+### 4.4. Tạo user consul và thư mục của nó
 ```sh
 sudo useradd --system --home /etc/consul.d --shell /bin/false consul
 sudo mkdir --parents /opt/consul
 sudo chown --recursive consul:consul /opt/consul
 ```
 
-## 4.5. Tạo service systemd `/etc/systemd/system/consul.service` để quản lý Consul dưới dạng service
+### 4.5. Tạo service systemd `/etc/systemd/system/consul.service` để quản lý Consul dưới dạng service
 ```sh
 [Unit]
 Description="HashiCorp Consul - A service mesh solution"
@@ -88,7 +88,7 @@ LimitNOFILE=65536
 WantedBy=multi-user.target
 ```
 
-## 4.6. Tạo file cấu hình cho Consul
+### 4.6. Tạo file cấu hình cho Consul
 ```sh
 sudo mkdir --parents /etc/consul.d
 sudo touch /etc/consul.d/consul.hcl
@@ -111,7 +111,7 @@ performance {
 
 Trong đó keygen `pju04BkafjtJ19xONoFGWL/BQG1/qO+TEojredSrTTM=` có thể được sinh bằng lệnh `consul keygen`
 
-## 4.7. Tạo file cấu hình cho Consul Server (consul client không thực hiện đoạn này)
+### 4.7. Tạo file cấu hình cho Consul Server (consul client không thực hiện đoạn này)
 ```sh
 sudo touch /etc/consul.d/server.hcl
 sudo chmod 640 /etc/consul.d/server.hcl
@@ -128,7 +128,7 @@ bind_addr = "10.159.19.84"
 client_addr = "0.0.0.0"
 ```
 
-## 4.8 Kiểm tra việc cài đặt
+### 4.8 Kiểm tra việc cài đặt
 ```sh
 consul members
 ```
@@ -179,7 +179,7 @@ Trên host minIO, tại thư mục `/etc/consul.d`, tạo file `minio.json` vớ
 }
 ```
 
-## 5.4. Kiểm tra Consul đã discover được các services
+### 5.4. Kiểm tra Consul đã discover được các services
 ```sh
 consul catalog services
 ```
@@ -251,5 +251,13 @@ Kiểm tra trên dashboard của Prometheus đã thấy xuất hiện service m�
 - https://learn.hashicorp.com/consul/datacenter-deploy/deployment-guide
 - https://stuarthowlette.me.uk/posts/prometheus-consul-node_exporter/
 - https://www.robustperception.io/finding-consul-services-to-monitor-with-prometheus
-- https://www.consul.io/api/agent/service.html
+- https://www.consul.io/api/agent/service.<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+</head>
+<body>
+
+</body>
+</html>
 - https://www.consul.io/docs/commands/services/register.html
